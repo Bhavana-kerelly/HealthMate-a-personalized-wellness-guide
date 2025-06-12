@@ -1,0 +1,1 @@
+HealthMate is a smart, machine-learning-based system that analyzes user lifestyle and dietary habits to predict nutrient deficiencies and deliver personalized dietary recommendations. By leveraging ML insights, it helps users make informed choices to enhance overall wellness.
