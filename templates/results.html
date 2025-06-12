@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Healthmate - Results</title>
+    <link rel="stylesheet" href="../static/css/style.css">
+    <style>
+        body {
+            background-image: url('../static/images/background.jpg');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+        }
+        .container {
+            background: rgba(255, 255, 255, 0.9);
+            padding: 20px;
+            border-radius: 10px;
+            width: 50%;
+            margin: auto;
+            margin-top: 50px;
+            text-align: center;
+        }
+        .result-box {
+            font-size: 20px;
+            font-weight: bold;
+            color: #333;
+            margin-top: 20px;
+        }
+        .btn {
+            display: inline-block;
+            padding: 10px 20px;
+            margin: 10px;
+            font-size: 18px;
+            color: white;
+            background: #007bff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none;
+            transition: 0.3s;
+        }
+        .btn:hover {
+            background: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 class="animated fadeInDown">Prediction Results</h1>
+        <div class="result-box animated fadeInUp">
+            <p><strong>Deficiency Detected:</strong> {{ result.Deficiency_Detected }}</p>
+            <p><strong>Deficiency Type:</strong> {{ result.Deficiency_Type }}</p>
+            <p><strong>Recommended Food:</strong> {{ result.Recommended_Food }}</p>
+        </div>
+        <a href="/questionnaire" class="btn animated bounceIn">Check Again</a>
+        <a href="/" class="btn animated bounceIn delay-1s">Go Home</a>
+    </div>
+</body>
+</html>

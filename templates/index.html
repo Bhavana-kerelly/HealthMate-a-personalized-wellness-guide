@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Healthmate - Personalized Wellness Guide</title>
+    <link rel="stylesheet" href="../static/css/style.css">
+    <style>
+        body {
+            background-image: url('../static/images/background.jpg');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+        }
+        .container {
+            background: rgba(255, 255, 255, 0.8);
+            padding: 20px;
+            border-radius: 10px;
+            width: 50%;
+            margin: auto;
+            margin-top: 50px;
+            text-align: center;
+        }
+        .btn-container {
+            margin-top: 20px;
+        }
+        .btn {
+            display: inline-block;
+            padding: 10px 20px;
+            margin: 10px;
+            font-size: 18px;
+            color: white;
+            background: #28a745;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none;
+            transition: 0.3s;
+        }
+        .btn:hover {
+            background: #218838;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 class="animated fadeInDown">Welcome to Healthmate</h1>
+        <p class="animated fadeInUp">Your personalized wellness guide.</p>
+        <div class="btn-container">
+            <a href="/questionnaire" class="btn animated bounceIn">Take the Questionnaire</a>
+            <a href="/about" class="btn animated bounceIn delay-1s">About Us</a>
+        </div>
+    </div>
+</body>
+</html>

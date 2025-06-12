@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Healthmate - Questionnaire</title>
+    <link rel="stylesheet" href="../static/css/style.css">
+    <style>
+        body {
+            background-image: url('../static/images/background.jpg');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+        }
+        .container {
+            background: rgba(255, 255, 255, 0.9);
+            padding: 30px;
+            border-radius: 10px;
+            width: 50%;
+            margin: auto;
+            margin-top: 50px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        label {
+            font-weight: bold;
+            display: block;
+            margin-bottom: 5px;
+        }
+        input, select {
+            width: 100%;
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+        .btn-container {
+            text-align: center;
+            margin-top: 20px;
+        }
+        .btn {
+            display: inline-block;
+            padding: 10px 20px;
+            margin: 10px;
+            font-size: 18px;
+            color: white;
+            background: #28a745;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+        .btn:hover {
+            background: #218838;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 class="animated fadeInDown">Health Questionnaire</h1>
+        <form action="/predict" method="POST" class="animated fadeInUp">
+            
+            <div class="form-group">
+                <label>Age:</label>
+                <input type="number" name="Age" required>
+            </div>
+            
+            <div class="form-group">
+                <label>Gender:</label>
+                <select name="Gender" required>
+                    <option value="Male">Male</option>
+                    <option value="Female">Female</option>
+                </select>
+            </div>
+            
+            <div class="form-group">
+                <label>BMI:</label>
+                <input type="number" name="BMI" step="0.1" required>
+            </div>
+            
+            <div class="form-group">
+                <label>Daily Water Intake (L):</label>
+                <input type="number" name="Daily_Water_Intake" step="0.1" required>
+            </div>
+            
+            <div class="form-group">
+                <label>Physical Activity Level:</label>
+                <select name="Physical_Activity_Level" required>
+                    <option value="Low">Low</option>
+                    <option value="Moderate">Moderate</option>
+                    <option value="High">High</option>
+                </select>
+            </div>
+            
+            <div class="form-group">
+                <label>Eating Habits:</label>
+                <select name="Eating_Habits" required>
+                    <option value="Healthy">Healthy</option>
+                    <option value="Moderate">Moderate</option>
+                    <option value="Unhealthy">Unhealthy</option>
+                </select>
+            </div>
+            
+            <div class="form-group">
+                <label>Medical Conditions:</label>
+                <input type="text" name="Medical_Conditions" required>
+            </div>
+            
+            <div class="form-group">
+                <label>Medication Usage:</label>
+                <select name="Medication_Usage" required>
+                    <option value="None">None</option>
+                    <option value="Occasionally">Occasionally</option>
+                    <option value="Regularly">Regularly</option>
+                </select>
+            </div>
+            
+            <div class="form-group">
+                <label>Sleep Hours:</label>
+                <input type="number" name="Sleep_Hours" required>
+            </div>
+            
+            <div class="form-group">
+                <label>Stress Level:</label>
+                <select name="Stress_Level" required>
+                    <option value="Low">Low</option>
+                    <option value="Moderate">Moderate</option>
+                    <option value="High">High</option>
+                </select>
+            </div>
+            
+            <div class="btn-container">
+                <button type="submit" class="btn animated pulse">Submit</button>
+                <button type="reset" class="btn animated shake">Clear</button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
